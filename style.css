@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #070b17;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.25;
+}
+
+
+.glow-one {
+    background: #4f46e5;
+
+    top: -200px;
+    left: -100px;
+}
+
+
+.glow-two {
+    background: #06b6d4;
+
+    bottom: -250px;
+    right: -100px;
+}
+
+
+nav {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.nav-badges {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.nav-badges span {
+    padding: 7px 14px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #b9c2d0;
+
+    font-size: 12px;
+}
+
+
+main {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 100px auto 0;
+
+    text-align: center;
+}
+
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(34,197,94,0.08);
+
+    border: 1px solid rgba(34,197,94,0.2);
+
+    color: #86efac;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px #22c55e;
+}
+
+
+h1 {
+    margin-top: 30px;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    font-weight: 800;
+}
+
+
+h1 span {
+    background: linear-gradient(
+        90deg,
+        #818cf8,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.description {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    color: #9ca7b8;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+button {
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #06b6d4
+    );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(99,102,241,0.3);
+}
+
+
+button.secondary {
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.info-card {
+    max-width: 700px;
+
+    margin: 55px auto 0;
+
+    padding: 18px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(20px);
+}
+
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: left;
+}
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.07);
+}
+
+
+.info-item small {
+    display: block;
+
+    color: #7d8899;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+
+.info-item strong {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+footer {
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #626d7e;
+
+    font-size: 12px;
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        overflow: auto;
+    }
+
+
+    nav {
+        margin-top: 20px;
+    }
+
+
+    .nav-badges {
+        display: none;
+    }
+
+
+    main {
+        margin-top: 80px;
+    }
+
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    .info-card {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: left;
+    }
+
+
+    footer {
+        position: static;
+
+        margin: 50px 0 20px;
+    }
+
+}

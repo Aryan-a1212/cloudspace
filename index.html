@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudSpace | Hello</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            ☁️ CloudSpace
+        </div>
+
+        <div class="nav-badges">
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>GitHub</span>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+
+        <h1>
+            Hello,<br>
+            <span>How are you?</span> 👋
+        </h1>
+
+
+        <p class="description">
+            Welcome to CloudSpace — a simple application
+            running inside a Docker container on AWS.
+        </p>
+
+
+        <div class="buttons">
+
+            <button onclick="showMessage()">
+                🚀 Explore
+            </button>
+
+            <button class="secondary" onclick="showStatus()">
+                View Status
+            </button>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-item">
+                <div class="icon">☁️</div>
+                <div>
+                    <small>Cloud</small>
+                    <strong>AWS EC2</strong>
+                </div>
+            </div>
+
+
+            <div class="info-item">
+                <div class="icon">🐳</div>
+                <div>
+                    <small>Container</small>
+                    <strong>Docker</strong>
+                </div>
+            </div>
+
+
+            <div class="info-item">
+                <div class="icon">⚡</div>
+                <div>
+                    <small>Status</small>
+                    <strong>Running</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <span>Built with ❤️</span>
+        <span>•</span>
+        <span>CloudSpace v1.0</span>
+    </footer>
+
+
+    <script>
+
+        function showMessage() {
+
+            alert("🚀 Welcome to CloudSpace!");
+
+        }
+
+
+        function showStatus() {
+
+            alert(
+                "🟢 Application: Online\n" +
+                "🟢 Docker: Running\n" +
+                "🟢 Cloud: AWS EC2"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
